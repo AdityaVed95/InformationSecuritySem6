@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to captcha website:</h1>
+    <table>
+        {{for i in range len(images_names)}}
+        <tr>
+            {{for image_name in images_names[i]}}
+            <td><img src="{{image_name}}" alt=""></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

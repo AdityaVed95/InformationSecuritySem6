@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to captcha website:</h1>
+    <table>
+        <tr>
+            
+            <td> <img src="../static/{{images_names_list[0]}}" alt=""> </td>
+            <td> <img src="../static/{{images_names_list[1]}}" alt=""> </td>
+            <td> <img src="../static/{{images_names_list[2]}}" alt=""> </td>
+        </tr>
+
+        <tr>
+            <td> <img src="../static/{{images_names_list[3]}}" alt=""> </td>
+            <td> <img src="../static/{{images_names_list[4]}}" alt=""> </td>
+            <td> <img src="../static/{{images_names_list[5]}}" alt=""> </td>
+        </tr>
+
+        <tr>
+            <td> <img src="../static/{{images_names_list[6]}}" alt=""> </td>
+            <td> <img src="../static/{{images_names_list[7]}}" alt=""> </td>
+            <td> <img src="../static/{{images_names_list[8]}}" alt=""> </td>
+        </tr>
+    </table>
+
+    <br><br><h3>Image numbering: </h3>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+
+    </table><br><br>
+
+    <h3>Write the no of the image which has a train:</h3>
+    <textarea name="response_of_user" id="response_of_user" cols="30" rows="10" value="Eg: 1, 2, 3"></textarea>
+    <br><br><button onclick="check_result()">Submit</button>
+
+    <script>
+        function check_result() {
+            response_of_user = document.getElementById("response_of_user").value;
+            if (response_of_user === "6,9" || response_of_user === "6, 9")
+            {
+                alert("You have been authenticated as human");
+            }
+            else
+            {
+                alert("You have been identified as machine");
+            }
+        }
+        
+    </script>
+</body>
+</html>
